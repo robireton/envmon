@@ -1,0 +1,41 @@
+{
+  "name": "envmon",
+  "version": "1.0.0",
+  "description": "manage data from ZGm053UKA Mini CO₂ Monitor",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node -r dotenv/config lib/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robireton/envmon.git"
+  },
+  "keywords": [
+    "USB",
+    "HID",
+    "CO₂",
+    "temperature",
+    "ZGm053UKA"
+  ],
+  "author": "Rob Ireton <rob@ireton.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robireton/envmon/issues"
+  },
+  "homepage": "https://github.com/robireton/envmon#readme",
+  "standard": {
+    "globals": [
+      "BigInt",
+      "Highcharts"
+    ]
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "node-hid": "^2.1.1",
+    "usb": "^1.6.3"
+  }
+}
