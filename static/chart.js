@@ -32,7 +32,10 @@ async function chartCO2 () {
         enabled: false
       },
       plotOptions: {
-        area: {
+        series: {
+          crisp: false
+        },
+        areaspline: {
           fillColor: {
             linearGradient: {
               x1: 0,
@@ -59,7 +62,7 @@ async function chartCO2 () {
       },
 
       series: [{
-        type: 'area',
+        type: 'areaspline',
         name: 'concentration of CO₂',
         data: data
       }]
@@ -100,7 +103,10 @@ async function chartTemp () {
         enabled: false
       },
       plotOptions: {
-        area: {
+        series: {
+          crisp: false
+        },
+        areaspline: {
           fillColor: {
             linearGradient: {
               x1: 0,
@@ -127,7 +133,7 @@ async function chartTemp () {
       },
 
       series: [{
-        type: 'area',
+        type: 'areaspline',
         name: 'temperature',
         data: data
       }]

@@ -1,9 +1,9 @@
 'use strict'
 
-function chartCO2 () {
+function chartCO2() {
   Highcharts.chart('containerCO2', {
     chart: {
-      type: 'spline'
+      type: 'areaspline'
     },
     title: {
       text: 'concentration of CO₂ over time'
@@ -25,7 +25,10 @@ function chartCO2 () {
       dataRefreshRate: 5
     },
     plotOptions: {
-      area: {
+      series: {
+        crisp: false
+      },
+      areaspline: {
         fillColor: {
           linearGradient: {
             x1: 0,
@@ -53,10 +56,10 @@ function chartCO2 () {
   })
 }
 
-function chartTemp () {
+function chartTemp() {
   Highcharts.chart('containerTemp', {
     chart: {
-      type: 'spline'
+      type: 'areaspline'
     },
     title: {
       text: 'temperature over time'
@@ -78,7 +81,10 @@ function chartTemp () {
       dataRefreshRate: 5
     },
     plotOptions: {
-      area: {
+      series: {
+        crisp: false
+      },
+      areaspline: {
         fillColor: {
           linearGradient: {
             x1: 0,
@@ -109,7 +115,7 @@ function chartTemp () {
 window.addEventListener('DOMContentLoaded', _event => {
   Highcharts.setOptions({
     time: {
-        timezoneOffset: +300 //EST is -05:00
+      timezoneOffset: +300 //EST is -05:00
     }
   })
   chartCO2()
