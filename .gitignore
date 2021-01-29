@@ -1,6 +1,9 @@
 # Background Documents
 doc
 
+# Runtime Data
+run
+
 # Logs
 logs
 *.log
