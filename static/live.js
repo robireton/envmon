@@ -1,6 +1,13 @@
-'use strict'
+import Highcharts from 'https://code.highcharts.com/es-modules/masters/highcharts.src.js'
+import 'https://code.highcharts.com/es-modules/masters/modules/data.src.js'
 
-function chartCO2() {
+function chartCO2 () {
+  const url = new URL(window.location.href)
+  const search = new URLSearchParams()
+  search.append('hours', '1.5')
+  url.pathname = '/co2'
+  url.search = search.toString()
+
   Highcharts.chart('containerCO2', {
     chart: {
       type: 'areaspline'
@@ -20,7 +27,7 @@ function chartCO2() {
       enabled: false
     },
     data: {
-      csvURL: 'http://rpi.local:8080/co2?hours=1.5',
+      csvURL: url.href,
       enablePolling: true,
       dataRefreshRate: 5
     },
@@ -52,11 +59,17 @@ function chartCO2() {
         },
         threshold: null
       }
-    },
+    }
   })
 }
 
-function chartTemp() {
+function chartTemp () {
+  const url = new URL(window.location.href)
+  const search = new URLSearchParams()
+  search.append('hours', '1.5')
+  url.pathname = '/temp'
+  url.search = search.toString()
+
   Highcharts.chart('containerTemp', {
     chart: {
       type: 'areaspline'
@@ -76,7 +89,7 @@ function chartTemp() {
       enabled: false
     },
     data: {
-      csvURL: 'http://rpi.local:8080/temp?hours=1.5',
+      csvURL: url.href,
       enablePolling: true,
       dataRefreshRate: 5
     },
@@ -108,14 +121,14 @@ function chartTemp() {
         },
         threshold: null
       }
-    },
+    }
   })
 }
 
 window.addEventListener('DOMContentLoaded', _event => {
   Highcharts.setOptions({
     time: {
-      timezoneOffset: +300 //EST is -05:00
+      timezoneOffset: 300 // EST is -05:00
     }
   })
   chartCO2()

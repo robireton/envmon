@@ -1,4 +1,4 @@
-'use strict'
+import Highcharts from 'https://code.highcharts.com/es-modules/masters/highcharts.src.js'
 
 async function chartCO2 () {
   const response = await window.fetch('/co2', {
@@ -68,7 +68,6 @@ async function chartCO2 () {
       }]
     })
   }
-
 }
 
 async function chartTemp () {
@@ -139,13 +138,12 @@ async function chartTemp () {
       }]
     })
   }
-
 }
 
 window.addEventListener('DOMContentLoaded', async _event => {
   Highcharts.setOptions({
     time: {
-        timezoneOffset: +300 //EST is -05:00
+      timezoneOffset: 300 // EST is -05:00
     }
   })
   chartCO2()
