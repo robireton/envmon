@@ -2,6 +2,7 @@
   "name": "envmon",
   "version": "1.0.0",
   "description": "manage data from ZGm053UKA Mini CO₂ Monitor",
+  "type": "module",
   "main": "lib/server.js",
   "scripts": {
     "start": "node -r dotenv/config lib/server.js",
