@@ -1,10 +1,11 @@
 {
   "name": "envmon",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "manage data from ZGm053UKA Mini CO₂ Monitor",
   "type": "module",
   "main": "lib/server.js",
   "scripts": {
+    "nodemon": "nodemon -r dotenv/config",
     "start": "node -r dotenv/config lib/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
