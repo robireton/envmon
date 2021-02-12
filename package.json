@@ -1,6 +1,6 @@
 {
   "name": "envmon",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "manage data from ZGm053UKA Mini CO₂ Monitor",
   "type": "module",
   "main": "lib/server.js",
@@ -39,7 +39,6 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "fs-extra": "^9.1.0",
-    "node-hid": "^2.1.1",
-    "usb": "^1.6.3"
+    "zgm053uka": "^1.0.0"
   }
 }
