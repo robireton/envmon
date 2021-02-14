@@ -1,5 +1,5 @@
 [Unit]
-Description=Environmental Monitor
+Description=Environment Monitor
 After=network.target
 
 [Service]
