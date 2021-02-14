@@ -15,6 +15,7 @@ environment variable | description | default
 --- | --- | ---
 DATA_CO2 | where to send the CO₂ data | http://localhost:3282/co2
 DATA_TEMP | where to send the temperature data | http://localhost:3282/temp
+VERBOSE | log readings | false
 
 ## Alsø Wik
 * https://hackaday.io/project/5301-reverse-engineering-a-low-cost-usb-co-monitor/log/17909-all-your-base-are-belong-to-us

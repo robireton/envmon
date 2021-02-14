@@ -29,12 +29,6 @@
     "url": "https://github.com/robireton/envmon/issues"
   },
   "homepage": "https://github.com/robireton/envmon#readme",
-  "standard": {
-    "globals": [
-      "BigInt",
-      "Highcharts"
-    ]
-  },
   "dependencies": {
     "@robireton/environment": "^2.1.0",
     "dotenv": "^8.2.0",
