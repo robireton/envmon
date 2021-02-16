@@ -1,5 +1,5 @@
 [Unit]
-Description=Environmental Monitor
+Description=Environment Monitor
 After=network.target
 
 [Service]
@@ -7,7 +7,7 @@ User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/envmon
 EnvironmentFile=/etc/envmon.env
-ExecStart=/usr/bin/node lib/server.js
+ExecStart=/usr/bin/node monitor.js
 Restart=always
 RestartSec=500ms
 StartLimitInterval=0
