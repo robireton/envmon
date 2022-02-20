@@ -1,6 +1,6 @@
 {
   "name": "envmon",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "recieves data from a ZGm053UKA Mini CO₂ Monitor and posts it to a data server",
   "type": "module",
   "engines": {
@@ -31,8 +31,8 @@
   "homepage": "https://github.com/robireton/envmon#readme",
   "dependencies": {
     "@robireton/environment": "^2.1.0",
-    "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.1",
+    "dotenv": "latest",
+    "node-fetch": "^3.2.0",
     "zgm053uka": "^1.0.0"
   }
 }
