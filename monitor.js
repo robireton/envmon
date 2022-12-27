@@ -1,10 +1,10 @@
-import env from '@robireton/environment'
+import { parseBool } from '@robireton/environment'
 import fetch from 'node-fetch'
 import ZGm053UKA from 'zgm053uka'
 
 const urlCO2 = process.env.DATA_CO2 || 'http://localhost:3282/co2'
 const urlTemp = process.env.DATA_TEMP || 'http://localhost:3282/temp'
-const verbose = env.parseBool('VERBOSE')
+const verbose = parseBool('VERBOSE')
 
 const device = new ZGm053UKA()
 
